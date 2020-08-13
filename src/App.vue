@@ -1,10 +1,10 @@
 <template>
   <div class="app">
     <img class="app__background"
-      srcset="./assets/background-sm.jpg 800w, ./assets/background-md.jpg 1280w, ./assets/background-lg.jpg 1920w"
-      sizes="(max-width: 600px) 800px, (max-width: 1100px) 1280px, 1920px" src="./assets/background-lg.jpg">
-    <Menu />
-    <component :is="page"></component>
+      srcset="./assets/images/background-sm.jpg 800w, ./assets/images/background-md.jpg 1280w, ./assets/images/background-lg.jpg 1920w"
+      sizes="(max-width: 600px) 800px, (max-width: 1000px) 1280px, 1920px" src="./assets/images/background-lg.jpg">
+    <app-menu @sectionChange="section = 'app-' + $event" class="app__menu" />
+    <component class="app__section" :is="section"></component>
   </div>
 </template>
 
@@ -13,29 +13,29 @@ import Vue from 'vue';
 
 import Menu from './components/Menu.vue';
 import Details from './views/Details.vue';
-import Education from './views/Education.vue'
+import Education from './views/Education.vue';
+import Portfolio from './views/Portfolio.vue';
+import Skills from './views/Skills.vue';
 
 export default Vue.extend({
   name: 'App',
   data() {
     return {
-      page: 'Details'
+      section: 'app-details',
+      lang: 'persian'
     }
   },
   components: {
-    Menu,
-    Details,
-    Education
+    appMenu: Menu,
+    'app-details': Details,
+    'app-education': Education,
+    'app-skills': Skills,
+    'app-portfolio': Portfolio
   }
 });
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .app {
   width: 100%;
   height: 100vh;
@@ -47,6 +47,15 @@ export default Vue.extend({
     position: absolute;
     z-index: -100;
     object-fit: cover;
+  }
+
+  &__section {
+    background-color: rgba($color-primary-dark, .7);
+    width: 80%;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }
 </style>

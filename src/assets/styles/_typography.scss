@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "IRANSans";
+  src: url("/src/assets/fonts/IRANSans.ttf");
+}
+@font-face {
+  font-family: "IRANSansBold";
+  src: url("/src/assets/fonts/IRANSans-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("/src/assets/fonts/Quicksand.ttf");
+}
+@font-face {
+  font-family: "QuicksandBold";
+  src: url("/src/assets/fonts/Quicksand-Bold.ttf");
+  font-weight: bold;
+}
+
+body, button {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  color: white;
+}

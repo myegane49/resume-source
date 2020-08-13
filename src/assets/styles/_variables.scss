@@ -1,0 +1,17 @@
+$color-primary-dark: #053b00;
+$color-primary-light: #0f7e00;
+$color-secondary-dark: rgb(0, 0, 99);
+$color-secondary-light: rgb(0, 70, 221);
+$font-primary: 'IRANSans', sans-serif;
+$font-primary-bold: 'IRANSansBold', sans-serif;
+$font-secondary: 'Quicksand', sans-serif;
+$font-secondary-bold: 'QuicksandBold', sans-serif;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content };  // 600px
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 62.5em) { @content };  // 1000px
+  }
+}

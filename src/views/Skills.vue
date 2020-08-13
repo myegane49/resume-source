@@ -1,6 +1,6 @@
 <template>
-  <div class="details">
-    details page
+  <div>
+    skills section
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'Details'
+  name: 'Skills'
 });
 </script>
 
