@@ -3,9 +3,9 @@ module.exports = {
     loaderOptions: {
       sass: {
         prependData: `
-          @import "@/assets/styles/_variables.scss";
-          @import "@/assets/styles/_typography.scss";
-          @import "@/assets/styles/_base.scss";
+          @import "./src/assets/styles/_variables.scss";
+          @import "./src/assets/styles/_typography.scss";
+          @import "./src/assets/styles/_base.scss";
         `
       }
     }
@@ -13,6 +13,22 @@ module.exports = {
   configureWebpack: {
     module: {
       rules: [
+        // {
+        //   test: /\.scss$/,
+        //   use: [
+        //     'style-loader',
+        //     'css-loader',
+        //     'postcss-loader',
+        //     'sass-loader',
+        //     {
+        //       loader: 'sass-resources-loader',
+        //       options: {
+        //         // Provide path to the file with resources
+        //         resources: './src/assets/styles/main.scss',
+        //       },
+        //     },
+        //   ],
+        // },
         // {
         //   test: /\.(ttf|otf|eot|woff|woff2)$/,
         //   use: {

@@ -4,8 +4,10 @@ $color-secondary-dark: rgb(0, 0, 99);
 $color-secondary-light: rgb(0, 70, 221);
 $font-primary: 'IRANSans', sans-serif;
 $font-primary-bold: 'IRANSansBold', sans-serif;
+$font-primary-light: 'IRANSansLight', sans-serif;
 $font-secondary: 'Quicksand', sans-serif;
 $font-secondary-bold: 'QuicksandBold', sans-serif;
+$font-secondary-light: 'QuicksandLight', sans-serif;
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
