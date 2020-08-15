@@ -4,9 +4,13 @@
       srcset="../assets/images/background-sm.jpg 800w, ../assets/images/background-md.jpg 1280w, ../assets/images/background-lg.jpg 1920w"
       sizes="(max-width: 600px) 800px, (max-width: 1000px) 1280px, 1920px" src="../assets/images/background-lg.jpg">
     <div class="app__section" ref="resumeSection">
-      <component :is="section"></component>
+      <component class="app__component" :is="section" :language="lang"></component>
     </div>
-    <app-menu :language="lang" @changeLang="lang = $event" @sectionChange="section = 'app-' + $event" />
+    <div class="app__backdrop" v-if="backdropVisible" @click="backdropVisible = !backdropVisible"></div>
+    <app-menu :language="lang" :slideState="backdropVisible"
+      @changeLang="lang = $event"
+      @sectionChange="section = 'app-' + $event"
+      @menuSlide="backdropVisible = $event" />
   </div>
 </template>
 
@@ -14,17 +18,18 @@
 import Vue from 'vue';
 
 import Menu from '../components/Menu.vue';
-import Details from '../views/Details.vue';
-import Education from '../views/Education.vue';
-import Portfolio from '../views/Portfolio.vue';
-import Skills from '../views/Skills.vue';
+import Details from '../components/Details.vue';
+import Education from '../components/Education.vue';
+import Portfolio from '../components/Portfolio.vue';
+import Skills from '../components/Skills.vue';
 
 export default Vue.extend({
   name: 'App',
   data() {
     return {
       section: 'app-details',
-      lang: 'persian'
+      lang: 'persian',
+      backdropVisible: false
     }
   },
   components: {
@@ -40,10 +45,17 @@ export default Vue.extend({
       if (value === 'english') {
         element.style.right = '0'
         element.style.left = 'auto'
+
+        document.querySelector('body')!.classList.add('english')
+        document.querySelector('body')!.classList.remove('persian')
       } else {
         element.style.left = '0'
         element.style.right = 'auto'
+
+        document.querySelector('body')!.classList.add('persian')
+        document.querySelector('body')!.classList.remove('english')
       }
+
     }
   }
 });
@@ -67,20 +79,38 @@ export default Vue.extend({
     background-color: rgba($color-primary-dark, .7);
     width: 80%;
     height: 100%;
+    padding: 2rem 6rem;
     position: absolute;
     top: 0;
     left: 0;
 
     @include respond(phone) {
       width: 100%;
+      padding: 5.5rem 1.5rem 3px 1.5rem;
     }
+  }
+
+  &__component {
+    width: 100%;
+    height: 100%;
+
+    @include respond(phone) {
+      overflow-y: scroll;
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
   }
 }
 
-// .sectionFa {
-//   left: 0;
-// }
-// .sectionEng {
-//   right: 0;
-// }
+.persian {
+  font-family: $font-primary;
+}
+.english {
+  font-family: $font-secondary;
+}
 </style>

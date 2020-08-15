@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="menu" :class="{menuFa: language === 'persian', menuEng: language === 'english'}" ref="menuBar"> -->
   <div class="menu" ref="menuBar" :class="{menuFa: language === 'persian', menuEng: language === 'english'}">
     <button @click="slideMenu" class="menu__menuBtn" :class="{'menu__menuBtn--left': language === 'english'}">
       <img src="../assets/images/menu-icon.png" alt="Menu Icon" class="menu__menuBtn--img">
@@ -8,13 +7,13 @@
     <button @click="alterLang" class="menu__langBtn">English/فارسی</button>
     <nav class="menu__nav">
       <button class="menu__navBtn" @click="changeSection('details')"
-        :class="{curSecStyle: curSection === 'details'}">{{language === 'persian' ? 'مشخصات': 'Details'}}</button>
+        :class="{curSecStyle: curSection === 'details'}">{{text.detailsBtn}}</button>
       <button class="menu__navBtn" @click="changeSection('education')"
-        :class="{curSecStyle: curSection === 'education'}">{{language === 'persian' ? 'آموزش': 'Education'}}</button>
+        :class="{curSecStyle: curSection === 'education'}">{{text.educationBtn}}</button>
       <button class="menu__navBtn" @click="changeSection('skills')"
-        :class="{curSecStyle: curSection === 'skills'}">{{language === 'persian' ? 'مهارت ها': 'Skills'}}</button>
+        :class="{curSecStyle: curSection === 'skills'}">{{text.skillsBtn}}</button>
       <button class="menu__navBtn" @click="changeSection('portfolio')"
-        :class="{curSecStyle: curSection === 'porfolio'}">{{language === 'persian' ? 'نمونه کار': 'Portfolio'}}</button>
+        :class="{curSecStyle: curSection === 'porfolio'}">{{text.portfolioBtn}}</button>
     </nav>
   </div>
 </template>
@@ -25,20 +24,47 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
-      curSection: 'details'
+      curSection: 'details',
+      persianText: {
+        detailsBtn: 'مشخصات',
+        educationBtn: 'آموزش',
+        skillsBtn: 'مهارت ها',
+        portfolioBtn: 'نمونه کار',
+      },
+      englishText: {
+        detailsBtn: 'Details',
+        educationBtn: 'Education',
+        skillsBtn: 'Skills',
+        portfolioBtn: 'Portfolio'
+      }
     }
   },
-  props: ['language'],
+  props: ['language', 'slideState'],
+  computed: {
+    text() {
+      if (this.language === 'persian') {
+        return this.persianText
+      } else {
+        return this.englishText
+      }
+    }
+  },
   methods: {
     changeSection(sectionName) {
       this.curSection = sectionName
       this.$emit('sectionChange', sectionName)
+      if (window.innerWidth < 600) {
+        this.slideMenu()
+      }
     },
     alterLang() {
       if (this.language === 'persian') {
         this.$emit('changeLang', 'english')
       } else {
         this.$emit('changeLang', 'persian')
+      }
+      if (window.innerWidth < 600) {
+        this.slideMenu()
       }
     },
     slideMenu() {
@@ -50,15 +76,19 @@ export default Vue.extend({
       if (right === 0 && this.language === 'persian') {
         element.style.right = '-50%'
         element.style.left = 'auto'
+        this.$emit('menuSlide', false)
       } else if (right < 0 && this.language === 'persian') {
         element.style.right = '0'
         element.style.left = 'auto'
+        this.$emit('menuSlide', true)
       } else if (left === 0 && this.language === 'english') {
         element.style.left = '-50%'
         element.style.right = 'auto'
+        this.$emit('menuSlide', false)
       } else if (left < 0 && this.language === 'english') {
         element.style.left = '0'
         element.style.right = 'auto'
+        this.$emit('menuSlide', true)
       }
     }
   },
@@ -72,6 +102,9 @@ export default Vue.extend({
         element.style.right = '0'
         element.style.left = 'auto'
       }
+    },
+    slideState: function() {
+      this.slideMenu()
     }
   }
 })
@@ -93,7 +126,7 @@ export default Vue.extend({
 
   @include respond(phone) {
     width: 50%;
-    background-color: rgba(lighten($color-primary-light, 30%), .2);
+    background-color: $color-primary-light;
   }
 
   &__photo {
