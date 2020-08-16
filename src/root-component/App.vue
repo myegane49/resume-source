@@ -94,7 +94,7 @@ export default Vue.extend({
     width: 100%;
     height: 100%;
 
-    @include respond(phone) {
+    @include respond(tablet) {
       overflow-y: scroll;
     }
   }
@@ -112,5 +112,9 @@ export default Vue.extend({
 }
 .english {
   font-family: $font-secondary;
+
+  a, button {
+    font-family: $font-secondary;
+  }
 }
 </style>

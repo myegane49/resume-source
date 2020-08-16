@@ -31,15 +31,4 @@ export default Vue.extend({
 .iconEng {
   order: -1;
 }
-
-.heading {
-  color: $color-secondary-light;
-  font-size: 2.3rem;
-  margin: 1.5rem;
-
-  @include respond(phone) {
-    font-size: 1.7rem;
-    margin: 1rem;
-  }
-}
 </style>

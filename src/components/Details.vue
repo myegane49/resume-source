@@ -1,8 +1,8 @@
 <template>
-  <div class="details">
-    <div class="details__main" :class="{details__mainFa: language === 'persian', details__mainEng: language === 'english'}">
+  <div class="details" :class="{'details--eng': language === 'english'}">
+    <div class="details__main" :class="{details__mainEng: language === 'english'}">
       <h1 class="details__name" :dir="direction">{{text.name}}</h1>
-      <h5 :dir="direction">{{text.profession}}</h5>
+      <h5 :dir="direction" :class="{carrier: language === 'english'}">{{text.profession}}</h5>
     </div>
     <div class="partition">
       <app-title :language="language" :direction="direction" imageSrc="/images/profile-icon.png">
@@ -10,8 +10,8 @@
       </app-title>
       <p :dir="direction" v-html="text.profileSec"></p>
       <p :dir="direction">{{text.dateOfBirth}}</p>
-      <p v-if="language === 'english'">{{englishText.gender}}</p>
-      <p v-if="language === 'persian'" dir="rtl">{{persianText.militaryService}}</p>
+      <p v-if="language === 'english'">Gender: Male</p>
+      <p v-if="language === 'persian'" dir="rtl">وضعیت سربازی: دارای کارت پایان خدمت</p>
     </div>
     <div class="partition">
       <app-title :language="language" :direction="direction" imageSrc="/images/contact-icon.png">{{text.contactHead}}</app-title>
@@ -39,7 +39,6 @@ export default Vue.extend({
         profileHead: 'شرح مختصر',
         profileSec: 'در دوره دبیرستان با زبان برنامه نویسی Visual Basic تا حدی آشنا شدم. در دوره دانشگاه با زبان های برنامه نویسی Fortran و MATLAB کار کردم و به کد نویسی علاقه پیدا کردم و دوره های آموزشی HTML/CSS و Javascript را در وبسایت <a href="https://www.udemy.com" target="_blank" style="color: lightgray">codecademy.com</a> گذراندم',
         dateOfBirth: 'تاریخ تولد: 20/11/1369',
-        militaryService: 'وضعیت سربازی: دارای کارت پایان خدمت',
         contactHead: 'تماس',
         email: 'ایمیل: m.yegane49@gmail.com',
         phone: 'تلفن: 09368364733',
@@ -52,7 +51,6 @@ export default Vue.extend({
         profileHead: 'Profile',
         profileSec: 'I spent many hours on learning and honing my web development skills on udemy.com and have worked on some personal projects, the links on which are included here.',
         dateOfBirth: 'Date of Birth: 1991-02-09',
-        gender: 'Gender: Male',
         contactHead: 'Contact',
         email: 'Email: m.yegane49@gmail.com',
         phone: 'Phone: +989368364733',
@@ -70,25 +68,33 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .details {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+  padding-left: 20%;
+  
   @include respond(phone) {
-    justify-content: flex-end;
+    padding-left: 0;
+  }
+
+  &--eng {
+    padding-left: 0;
+    padding-right: 20%;
+
+    @include respond(phone) {
+      padding-right: 0;
+    }
   }
 
   &__main {
-    position: absolute;
-    top: 0;
+    margin-bottom: 7rem;
+
+    @include respond(phone) {
+      margin-bottom: 1rem;
+    }
   }
 
-  &__mainFa {
-    right: 0;
-  }
   &__mainEng {
-    left: 0;
+    @include respond(phone) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__name {
@@ -103,5 +109,9 @@ export default Vue.extend({
       font-size: 3rem;
     }
   }
+}
+
+.carrier {
+  margin-top: .6rem;
 }
 </style>

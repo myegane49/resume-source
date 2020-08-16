@@ -4,7 +4,10 @@
       <img src="../assets/images/menu-icon.png" alt="Menu Icon" class="menu__menuBtn--img">
     </button>
     <img class="menu__photo" src="../assets/images/photo.jpg" alt="Photo of me">
-    <button @click="alterLang" class="menu__langBtn">English/فارسی</button>
+    <div>
+      <button @click="alterLang" class="menu__langBtn">English/فارسی</button>
+      <a class="menu__pdf" href="#" :download="language === 'persian' ? pdfLinkFa: pdfLinkEn">{{text.pdf}}</a>
+    </div>
     <nav class="menu__nav">
       <button class="menu__navBtn" @click="changeSection('details')"
         :class="{curSecStyle: curSection === 'details'}">{{text.detailsBtn}}</button>
@@ -29,14 +32,18 @@ export default Vue.extend({
         detailsBtn: 'مشخصات',
         educationBtn: 'آموزش',
         skillsBtn: 'مهارت ها',
-        portfolioBtn: 'نمونه کار',
+        portfolioBtn: 'تجربه کاری',
+        pdf: 'دانلود PDF',
       },
       englishText: {
         detailsBtn: 'Details',
         educationBtn: 'Education',
         skillsBtn: 'Skills',
-        portfolioBtn: 'Portfolio'
-      }
+        portfolioBtn: 'Experience',
+        pdf: 'Download PDF'
+      },
+      pdfLinkEn: '/pdf/Resume_en_Mohammad_Ahmady_Yeganeh.pdf',
+      pdfLinkFa: '/pdf/Resume_fa_Mohammad_Ahmady_Yeganeh.pdf'
     }
   },
   props: ['language', 'slideState'],
@@ -140,10 +147,17 @@ export default Vue.extend({
     }
   }
 
-  &__langBtn {
+  &__langBtn, &__pdf {
     background-color: rgba($color-secondary-dark, .5);
     border-radius: 5px;
     padding: .5rem 1.5rem;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &__pdf {
+    margin-top: 5px;
+    text-align: center;
   }
 
   &__nav {

@@ -4,11 +4,16 @@
   border: none;
   box-sizing: border-box;
   text-decoration: none;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 html {
   font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
 }
 
 button {
