@@ -71,15 +71,16 @@ export default Vue.extend({
   padding-left: 20%;
   
   @include respond(phone) {
-    padding-left: 0;
+    padding-left: 1.5rem;
   }
 
   &--eng {
-    padding-left: 0;
+    padding-left: 6rem;
     padding-right: 20%;
 
     @include respond(phone) {
-      padding-right: 0;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
 

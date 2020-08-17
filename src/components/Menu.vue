@@ -4,9 +4,12 @@
       <img src="../assets/images/menu-icon.png" alt="Menu Icon" class="menu__menuBtn--img">
     </button>
     <img class="menu__photo" src="../assets/images/photo.jpg" alt="Photo of me">
+    <button @click="alterLang" class="menu__langBtn">English/فارسی</button>
     <div>
-      <button @click="alterLang" class="menu__langBtn">English/فارسی</button>
-      <a class="menu__pdf" href="#" :download="language === 'persian' ? pdfLinkFa: pdfLinkEn">{{text.pdf}}</a>
+      <a class="menu__pdf" href="#" :download="language === 'persian' ? pdfLinkFa: pdfLinkEn">
+        <img src="../assets/images/pdf-icon.png" alt="">
+      </a>
+      <p>{{text.pdf}}</p>
     </div>
     <nav class="menu__nav">
       <button class="menu__navBtn" @click="changeSection('details')"
@@ -147,7 +150,7 @@ export default Vue.extend({
     }
   }
 
-  &__langBtn, &__pdf {
+  &__langBtn {
     background-color: rgba($color-secondary-dark, .5);
     border-radius: 5px;
     padding: .5rem 1.5rem;
@@ -156,8 +159,12 @@ export default Vue.extend({
   }
 
   &__pdf {
-    margin-top: 5px;
     text-align: center;
+    display: block;
+    
+    img {
+      width: 5rem;
+    }
   }
 
   &__nav {

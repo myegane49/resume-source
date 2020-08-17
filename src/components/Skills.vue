@@ -5,13 +5,13 @@
       <ul :dir="direction" class="skillList">
         <li :dir="direction">HTML & CSS</li>
         <li :dir="direction">Javascript</li>
+        <li :dir="direction">Typescript</li>
         <li :dir="direction">Bootstrap</li>
         <li :dir="direction">JQuery</li>
         <li :dir="direction">SASS</li>
         <li :dir="direction">Git</li>
         <li :dir="direction">Reactjs, Nextjs, Redux</li>
         <li :dir="direction">Vuejs, Nuxtjs</li>
-        <li :dir="direction">TypeScript</li>
         <li :dir="direction">PWA</li>
         <li :dir="direction">Nodejs, Expressjs</li>
         <li :dir="direction">MySQL</li>
@@ -32,7 +32,7 @@
       <div class="ieltsRes" :dir="direction">Reading: 7</div>
       <div class="ieltsRes" :dir="direction">Writing: 7</div>
       <div class="ieltsRes" :dir="direction">Speaking: 7</div>
-      
+      <p v-if="language === 'english'">Persian: Native Speaker</p>
     </div>
   </div>
 </template>
@@ -68,11 +68,11 @@ export default Vue.extend({
 .skills {
   display: flex;
   justify-content: center;
-  margin-top: 10rem;
+  padding-top: 12rem;
 
   @include respond(phone) {
     display: inline-block;
-    margin-top: 0;
+    padding-top: 5.5rem;
   }
 
   > div {

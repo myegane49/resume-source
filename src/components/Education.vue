@@ -15,23 +15,11 @@
       <app-title :language="language" :direction="direction" imageSrc="/images/udemy-icon.png">
         udemy.com
       </app-title>
+      <p class="total" :dir="direction">{{totalHours}}</p>
       <ul :dir="direction" class="edu__courses">
-        <li :dir="direction" class="edu__courseItem">How to Create A Website: An HTML Tutorial and CSS Tutorial. By Todd Mcloed</li>
-        <li :dir="direction" class="edu__courseItem">The Complete JavaScript Course 2018: Build Real Projects. By Jonas Schmedtmann</li>
-        <li :dir="direction" class="edu__courseItem">The Complete jQuery Course: From Beginner To Advanced. By Peter Sommerhoff</li>
-        <li :dir="direction" class="edu__courseItem">The Complete Node.js Developer Course (2rd Edition). By Andrew Mead</li>
-        <li :dir="direction" class="edu__courseItem">React The Complete Guide incl Hooks React Router Redux 2019-5</li>
-        <li :dir="direction" class="edu__courseItem">Advanced CSS and Sass: Flexbox, Grid, Animations and More. By Jonas Schmedtman</li>
-        <li :dir="direction" class="edu__courseItem">Master Wordpress Quickly. By Andrew Williams</li>
-        <li :dir="direction" class="edu__courseItem">Git Complete The definitive step by step guide to Git 2018</li>
-        <li :dir="direction" class="edu__courseItem">Bootstrapc4 From Scratch With 5 Projects</li>
-        <li :dir="direction" class="edu__courseItem">The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert 2019-2</li>
-        <li :dir="direction" class="edu__courseItem">SEO 2019 Complete SEO Training SEO for WordPress Websites</li>
-        <li :dir="direction" class="edu__courseItem">Vue JS 2 The Complete Guide incl. Vue Router Vuex </li>
-        <li :dir="direction" class="edu__courseItem">Nuxt.js Vue.js on Steroids 2019-2</li>
-        <li :dir="direction" class="edu__courseItem">Progressive Web Apps PWA The Complete Guide 2019</li>
-        <li :dir="direction" class="edu__courseItem">Lynda.com: Photoshop.CC.2018 One on One Fundamentals</li>
-        <li :dir="direction" class="edu__courseItem">Lynda.com: Illustrator.CC.2018 Essential Training</li>
+        <li :dir="direction" class="edu__courseItem" v-for="course in courses" :key="course.name">
+          <a :href="course.link" target="_blank">{{course.title}}</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -54,13 +42,130 @@ export default Vue.extend({
       englishText: {
         uniHead: 'College',
         college: 'Bachelor in Mechanical Engineering From Ferdowsi University of Mashhad in Iran<div style="color: lightgray;">August, 2009 -- September, 2014</div>'
-      }
+      },
+      courses: [
+        {
+          name: 'html-css',
+          title: 'How to Create A Website: An HTML Tutorial and CSS Tutorial',
+          link: 'https://www.udemy.com/course/html-tutorial/',
+          duration: 32.5
+        },
+        {
+          name: 'javascript',
+          title: 'The Complete JavaScript Course 2018: Build Real Projects',
+          link: 'https://www.udemy.com/course/the-complete-javascript-course/',
+          duration: 28
+        },
+        {
+          name: 'jquery',
+          title: 'The Complete jQuery Course: From Beginner To Advanced',
+          link: 'https://www.udemy.com/course/jquery-tutorial/',
+          duration: 6
+        },
+        {
+          name: 'nodejs',
+          title: 'The Complete Node.js Developer Course (2rd Edition)',
+          link: 'https://www.udemy.com/course/the-complete-nodejs-developer-course-2/',
+          duration: 35
+        },
+        {
+          name: 'reactjs',
+          title: 'React The Complete Guide incl Hooks React Router Redux',
+          link: 'https://www.udemy.com/course/react-the-complete-guide-incl-redux/',
+          duration: 40
+        },
+        {
+          name: 'sass',
+          title: 'Advanced CSS and Sass: Flexbox, Grid, Animations and More',
+          link: 'https://www.udemy.com/course/advanced-css-and-sass/',
+          duration: 28
+        },
+        {
+          name: 'wordpress',
+          title: 'Master Wordpress Quickly',
+          link: 'https://www.udemy.com/course/wordpress-for-beginners-course/',
+          duration: 9
+        },
+        {
+          name: 'git',
+          title: 'Git Complete The definitive step by step guide to Git',
+          link: 'https://www.udemy.com/course/git-complete/',
+          duration: 6
+        },
+        {
+          name: 'bootstrap',
+          title: 'Bootstrapc4 From Scratch With 5 Projects',
+          link: 'https://www.udemy.com/course/bootstrap-4-from-scratch-with-5-projects/',
+          duration: 11.5
+        },
+        {
+          name: 'mysql',
+          title: 'The Ultimate MySQL Bootcamp Go from SQL Beginner to Expert',
+          link: 'https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/',
+          duration: 20.5
+        },
+        {
+          name: 'seo',
+          title: 'SEO 2019 Complete SEO Training SEO for WordPress Websites',
+          link: 'https://www.udemy.com/course/seo-get-to-number1-in-google-search/',
+          duration: 10
+        },
+        {
+          name: 'vuejs',
+          title: 'Vue JS 2 The Complete Guide incl. Vue Router Vuex',
+          link: 'https://www.udemy.com/course/vuejs-2-the-complete-guide/',
+          duration: 22
+        },
+        {
+          name: 'nuxtjs',
+          title: 'Nuxt.js Vue.js on Steroids',
+          link: 'https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/',
+          duration: 7
+        },
+        {
+          name: 'pwa',
+          title: 'Progressive Web Apps PWA The Complete Guide',
+          link: 'https://www.udemy.com/course/progressive-web-app-pwa-the-complete-guide/',
+          duration: 16
+        },
+        {
+          name: 'typescript',
+          title: 'Understanding TypeScript - 2020 Edition',
+          link: 'https://www.udemy.com/course/understanding-typescript/',
+          duration: 15
+        },
+        {
+          name: 'photoshop',
+          title: 'Lynda.com: Photoshop.CC.2018 One on One Fundamentals',
+          link: 'https://www.lynda.com/Photoshop-tutorials/Photoshop-CC-2018-One-One-Fundamentals/633852-2.html',
+          duration: 16.5
+        },
+        {
+          name: 'illustrator',
+          title: 'Lynda.com: Illustrator.CC.2018 Essential Training',
+          link: 'https://www.lynda.com/Illustrator-tutorials/Illustrator-CC-2018-Essential-Training/628695-2.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3aIllustrator+cc+2018%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2',
+          duration: 4.5
+        }
+      ]
     }
   },
   components: {
     'app-title': Title
   },
-  mixins: [languageMixin]
+  mixins: [languageMixin],
+  computed: {
+    totalHours() {
+      let total = 0
+      this.courses.forEach(course => {
+        total += course.duration
+      })
+      if (this.language === 'persian') {
+        return `مجموع ${total} ساعت آموزش تا به امروز`
+      } else {
+        return `A total of ${total} hours of education on web development till now`
+      }
+    }
+  }
 });
 </script>
 
@@ -69,15 +174,16 @@ export default Vue.extend({
   padding-left: 20%;
   
   @include respond(phone) {
-    padding-left: 0;
+    padding-left: 1.5rem;
   }
 
   &--eng {
-    padding-left: 0;
+    padding-left: 6rem;
     padding-right: 20%;
 
     @include respond(phone) {
-      padding-right: 0;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
 
@@ -94,4 +200,9 @@ export default Vue.extend({
   }
 }
 
+.partition .total {
+  margin-bottom: 1.5rem;
+  color: $color-secondary-light;
+  font-weight: bold;
+}
 </style>

@@ -4,7 +4,9 @@
       srcset="../assets/images/background-sm.jpg 800w, ../assets/images/background-md.jpg 1280w, ../assets/images/background-lg.jpg 1920w"
       sizes="(max-width: 600px) 800px, (max-width: 1000px) 1280px, 1920px" src="../assets/images/background-lg.jpg">
     <div class="app__section" ref="resumeSection">
-      <component class="app__component" :is="section" :language="lang"></component>
+      <transition name="fade">
+        <component class="app__component" :is="section" :language="lang"></component>
+      </transition>
     </div>
     <div class="app__backdrop" v-if="backdropVisible" @click="backdropVisible = !backdropVisible"></div>
     <app-menu :language="lang" :slideState="backdropVisible"
@@ -79,23 +81,38 @@ export default Vue.extend({
     background-color: rgba($color-primary-dark, .7);
     width: 80%;
     height: 100%;
-    padding: 2rem 6rem;
+    
     position: absolute;
     top: 0;
     left: 0;
 
     @include respond(phone) {
       width: 100%;
-      padding: 5.5rem 1.5rem 3px 1.5rem;
     }
   }
 
   &__component {
     width: 100%;
     height: 100%;
+    padding: 2rem 6rem;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      background-color: $color-primary-light;
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary-dark;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
 
     @include respond(tablet) {
-      overflow-y: scroll;
+      padding: 5.5rem 1.5rem 3px 1.5rem;
     }
   }
 
@@ -116,5 +133,20 @@ export default Vue.extend({
   a, button {
     font-family: $font-secondary;
   }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: opacity .4s;
+  transition-timing-function: ease-in-out;
+}
+
+.fade-leave-active {
+  transition: opacity .4s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
 }
 </style>

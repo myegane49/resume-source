@@ -42,19 +42,19 @@ export default Vue.extend({
           link: 'https://yegane-imagebay.herokuapp.com',
           imageSrc: '/images/imagebay.png',
           descriptionEn: 'A Nodejs REST API app hosted on Heroku and Mongodb Atlas with files stored on Firebase',
-          descriptionFa: 'یک REST API با Nodejs و دیتابیس Mongodb میزبانی شده روی Heroku و Mongodb Atlas و میزبانی فایلها روی Firebase Storage'
+          descriptionFa: 'یک REST API با استفاده از Nodejs و دیتابیس Mongodb میزبانی شده روی Heroku و Mongodb Atlas و میزبانی فایلها روی Firebase Storage'
         },
         xogame: {
           link: 'https://yegane-xo-game.herokuapp.com',
           imageSrc: '/images/xo-game.png',
-          descriptionEn: 'A simple game with the vanilla Javascript',
-          descriptionFa: 'یک بازی ساده با جاوااسکریپت'
+          descriptionEn: 'A simple game build with vanilla Javascript and using the MVC architecture model',
+          descriptionFa: 'یک بازی ساده با استفاده از Javascript و مدل معماری MVC'
         },
         acmilan: {
           link: 'https://yegane-acmilan.herokuapp.com',
           imageSrc: '/images/acmilan.png',
-          descriptionEn: 'A custom built widget with jQuery',
-          descriptionFa: 'یک ویجت ساخته شده با JQuery'
+          descriptionEn: 'A custom built carousel widget and a drop down menu using jQuery',
+          descriptionFa: 'یک ویجت سفارشی ساخته شده carousel و یک منوی drop down با استفاده از JQuery'
         }
       }
     }
@@ -68,18 +68,15 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-  
-  
 .projects {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 75vh;
+  // display: flex;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // height: 75vh;
 
   @include respond(tablet) {
-    flex-wrap: nowrap;
-    height: auto;
+    // flex-wrap: nowrap;
+    // height: auto;
   }
-
 }
 </style>

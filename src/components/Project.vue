@@ -20,7 +20,7 @@ export default Vue.extend({
 .project {
   padding: 1rem 0;
   margin: .6rem 0;
-  width: 48%;
+  width: 80%;
   border-radius: 4px;
   background-color: rgba($color-secondary-dark, .4);
   display: flex;
