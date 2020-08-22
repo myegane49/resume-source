@@ -6,7 +6,7 @@
     <img class="menu__photo" src="../assets/images/photo.jpg" alt="Photo of me">
     <button @click="alterLang" class="menu__langBtn">English/فارسی</button>
     <div>
-      <a class="menu__pdf" href="#" :download="language === 'persian' ? pdfLinkFa: pdfLinkEn">
+      <a class="menu__pdf" :href="language === 'persian' ? pdfLinkFa: pdfLinkEn" download>
         <img src="../assets/images/pdf-icon.png" alt="">
       </a>
       <p>{{text.pdf}}</p>
