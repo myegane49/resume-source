@@ -28,9 +28,9 @@
     <div class="partition" :class="{languageFa: language === 'persian'}">
       <h4 class="heading" :dir="direction">{{text.languageHead}}</h4>
       <p :dir="direction">{{text.ieltsResult}}</p>
-      <div class="ieltsRes" :dir="direction">Listening: 7</div>
+      <div class="ieltsRes" :dir="direction">Listening: 7.5</div>
       <div class="ieltsRes" :dir="direction">Reading: 7</div>
-      <div class="ieltsRes" :dir="direction">Writing: 7</div>
+      <div class="ieltsRes" :dir="direction">Writing: 6.5</div>
       <div class="ieltsRes" :dir="direction">Speaking: 7</div>
       <p v-if="language === 'english'">Persian: Native Speaker</p>
     </div>

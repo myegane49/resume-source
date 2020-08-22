@@ -53,8 +53,8 @@ export default Vue.extend({
         acmilan: {
           link: 'https://yegane-acmilan.herokuapp.com',
           imageSrc: '/images/acmilan.png',
-          descriptionEn: 'A custom built carousel widget and a drop down menu using jQuery',
-          descriptionFa: 'یک ویجت سفارشی ساخته شده carousel و یک منوی drop down با استفاده از JQuery'
+          descriptionEn: 'A custom built carousel widget and a collapsible menu using jQuery',
+          descriptionFa: 'یک ویجت سفارشی ساخته شده carousel و یک منوی collapsible با استفاده از JQuery'
         }
       }
     }
