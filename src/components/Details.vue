@@ -40,7 +40,7 @@ export default Vue.extend({
         profileSec: 'در دوره دبیرستان با زبان برنامه نویسی Visual Basic تا حدی آشنا شدم. در دوره دانشگاه با زبان های برنامه نویسی Fortran و MATLAB کار کردم و به کد نویسی علاقه پیدا کردم و دوره های آموزشی HTML/CSS و Javascript را در وبسایت <a href="https://www.udemy.com" target="_blank" style="color: lightgray">codecademy.com</a> گذراندم',
         dateOfBirth: 'تاریخ تولد: 20/11/1369',
         contactHead: 'تماس',
-        email: 'ایمیل: m.yegane49@gmail.com',
+        email: 'ایمیل: m.yegane49@protonmail.com',
         phone: 'تلفن: 09368364733',
         address: 'آدرس فعلی: خراسان رضوی - قوچان',
         linkedin: 'لینکداین: '
@@ -52,7 +52,7 @@ export default Vue.extend({
         profileSec: 'I spent many hours on learning and honing my web development skills on udemy.com and have worked on some personal projects, the links on which are included here.',
         dateOfBirth: 'Date of Birth: 1991-02-09',
         contactHead: 'Contact',
-        email: 'Email: m.yegane49@gmail.com',
+        email: 'Email: m.yegane49@protonmail.com',
         phone: 'Phone: +989368364733',
         address: 'Current Address: Iran, Quchan',
         linkedin: 'Linkedin: '
