@@ -1,7 +1,7 @@
 <template>
   <div dir="ltr" class="project" :class="{'project--eng': language === 'english'}">
     <div class="project__details" :class="{'project__details--eng': language === 'english'}">
-      <a target="_blank" class="project__link" :dir="direction" :href="project.link">{{project.link}}</a>
+      <p class="project__link" :dir="direction"><a target="_blank" :href="project.link">{{project.link}}</a></p>
       <p :dir="direction">{{language === 'persian' ? project.descriptionFa: project.descriptionEn}}</p>
     </div>
     <a class="project__imageLink" target="_blank" :href="project.link"><img :src="project.imageSrc"></a>
@@ -12,7 +12,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  props: ['language', 'direction', 'project']  
+  props: ['language', 'direction', 'project']
 })
 </script>
 
@@ -59,9 +59,11 @@ export default Vue.extend({
   }
 
   &__link {
-    display: block;
     margin-bottom: 1.5rem;
-    color: lightgray;
+
+    a {
+      color: lightgray;
+    }
   }
 
   &__imageLink {

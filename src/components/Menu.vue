@@ -104,7 +104,7 @@ export default Vue.extend({
   },
   watch: {
     language: function(value) {
-      const element = this.$refs.menuBar 
+      const element = this.$refs.menuBar
       if (value === 'english') {
         element.style.left = '0'
         element.style.right = 'auto'
@@ -161,7 +161,7 @@ export default Vue.extend({
   &__pdf {
     text-align: center;
     display: block;
-    
+
     img {
       width: 5rem;
     }
@@ -170,6 +170,10 @@ export default Vue.extend({
   &__nav {
     margin-bottom: 5rem;
     width: 100%;
+
+    @include respond(phone) {
+      margin-bottom: 0;
+    }
   }
 
   &__navBtn {
@@ -178,7 +182,7 @@ export default Vue.extend({
     background-color: rgba($color-primary-dark, .5);
     font-size: 2rem;
     padding: 1rem 0;
-    
+
     &:not(:last-child) {
       border-bottom: 1px solid $color-primary-dark;
     }
@@ -186,7 +190,7 @@ export default Vue.extend({
     &:hover {
       background-color: rgba($color-secondary-dark, .5);
     }
-    
+
   }
 
   &__menuBtn {

@@ -27,7 +27,7 @@
 import Vue from 'vue';
 
 import Title from './Title'
-import { languageMixin } from '@/languageMixin' 
+import { languageMixin } from '@/languageMixin'
 
 export default Vue.extend({
   name: 'Details',
@@ -49,7 +49,7 @@ export default Vue.extend({
         name: 'Mohammad Ahmady Yeganeh',
         profession: 'Web Developer',
         profileHead: 'Profile',
-        profileSec: 'I spent many hours on learning and honing my web development skills on udemy.com and have worked on some personal projects, the links on which are included here.',
+        profileSec: 'I spent many hours learning and honing my web development skills on udemy.com and have worked on some personal projects, the links on which are included here.',
         dateOfBirth: 'Date of Birth: 1991-02-09',
         contactHead: 'Contact',
         email: 'Email: m.yegane49@protonmail.com',
@@ -69,7 +69,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .details {
   padding-left: 20%;
-  
+
   @include respond(phone) {
     padding-left: 1.5rem;
   }
