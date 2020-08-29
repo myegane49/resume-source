@@ -32,6 +32,7 @@
       <div class="ieltsRes" :dir="direction">Reading: 7</div>
       <div class="ieltsRes" :dir="direction">Writing: 6.5</div>
       <div class="ieltsRes" :dir="direction">Speaking: 7</div>
+      <div class="ieltsRes" :dir="direction">Band Score: 7</div>
       <p v-if="language === 'english'">Persian: Native Speaker</p>
     </div>
   </div>
