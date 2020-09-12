@@ -56,7 +56,7 @@ export default Vue.extend({
       englishText: {
         codingHead: 'Coding Skills',
         softwareHead: 'Software Skills',
-        languageHead: 'English language',
+        languageHead: 'Languages',
         ieltsResult: 'Official IELTS test result:'
       }
     }
