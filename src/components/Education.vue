@@ -135,6 +135,18 @@ export default Vue.extend({
           duration: 15
         },
         {
+          name: 'PHP',
+          title: 'PHP for Beginners - Become a PHP Master - CMS Project',
+          link: 'https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/',
+          duration: 35
+        },
+        {
+          name: 'Laravel',
+          title: 'PHP with Laravel for beginners - Become a Master in Laravel ',
+          link: 'https://www.udemy.com/course/php-with-laravel-for-beginners-become-a-master-in-laravel/',
+          duration: 30
+        },
+        {
           name: 'photoshop',
           title: 'Lynda.com: Photoshop.CC.2018 One on One Fundamentals',
           link: 'https://www.lynda.com/Photoshop-tutorials/Photoshop-CC-2018-One-One-Fundamentals/633852-2.html',

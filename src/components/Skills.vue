@@ -15,6 +15,7 @@
         <li :dir="direction">PWA</li>
         <li :dir="direction">Nodejs, Expressjs</li>
         <li :dir="direction">MySQL</li>
+        <li :dir="direction">PHP, Laravel</li>
       </ul>
     </div>
     <div class="partition" :class="{softwareFa: language === 'persian'}">
@@ -56,7 +57,7 @@ export default Vue.extend({
       englishText: {
         codingHead: 'Coding Skills',
         softwareHead: 'Software Skills',
-        languageHead: 'Languages',
+        languageHead: 'Language Skills',
         ieltsResult: 'Official IELTS test result:'
       }
     }
