@@ -142,7 +142,7 @@ export default Vue.extend({
         },
         {
           name: 'Laravel',
-          title: 'PHP with Laravel for beginners - Become a Master in Laravel ',
+          title: 'PHP with Laravel for beginners - Become a Master in Laravel',
           link: 'https://www.udemy.com/course/php-with-laravel-for-beginners-become-a-master-in-laravel/',
           duration: 30
         },
