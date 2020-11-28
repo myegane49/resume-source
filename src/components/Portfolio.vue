@@ -55,6 +55,12 @@ export default Vue.extend({
           imageSrc: '/images/acmilan.png',
           descriptionEn: 'A custom built carousel widget and a collapsible menu using jQuery',
           descriptionFa: 'یک ویجت سفارشی ساخته شده carousel و یک منوی collapsible با استفاده از JQuery'
+        },
+        naghshe: {
+          link: 'https://naghshe.herokuapp.com',
+          imageSrc: '/images/contractor-map.png',
+          descriptionEn: 'A small app for a piping company that shows different oil companies and their related contractors on the map built with Vuejs',
+          descriptionFa: 'یک اپ کوچک برای نشان دادن شرکت ها و پیمانکارهای طرف قرار داد یک شرکت لوله سازی بر روی نقشه ایران با استفاده از Vuejs'
         }
       }
     }

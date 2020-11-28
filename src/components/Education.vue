@@ -141,6 +141,18 @@ export default Vue.extend({
           duration: 35
         },
         {
+          name: 'PHPOOP',
+          title: 'PHP OOP: Object Oriented Programming for beginners + Project',
+          link: 'https://www.udemy.com/course/oop-php-object-oriented-programing-with-project-1-course/',
+          duration: 16
+        },
+        {
+          name: 'PHPMVC',
+          title: 'Object Oriented PHP & MVC',
+          link: 'https://www.udemy.com/course/object-oriented-php-mvc/',
+          duration: 6
+        },
+        {
           name: 'Laravel',
           title: 'PHP with Laravel for beginners - Become a Master in Laravel',
           link: 'https://www.udemy.com/course/php-with-laravel-for-beginners-become-a-master-in-laravel/',
