@@ -41,7 +41,7 @@ export default Vue.extend({
         dateOfBirth: 'تاریخ تولد: 20/11/1369',
         contactHead: 'تماس',
         email: 'ایمیل: m.yegane49@protonmail.com',
-        phone: 'تلفن: 09368364733',
+        phone: 'تلفن: 09056763733',
         address: 'آدرس فعلی: خراسان رضوی - قوچان',
         linkedin: 'لینکداین: '
       },
@@ -53,7 +53,7 @@ export default Vue.extend({
         dateOfBirth: 'Date of Birth: 1991-02-09',
         contactHead: 'Contact',
         email: 'Email: m.yegane49@protonmail.com',
-        phone: 'Phone: +989368364733',
+        phone: 'Phone: 00989056763733',
         address: 'Current Address: Iran, Quchan',
         linkedin: 'Linkedin: '
       }
