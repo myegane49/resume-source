@@ -22,7 +22,7 @@ export default Vue.extend({
   margin: .6rem 0;
   width: 80%;
   border-radius: 4px;
-  background-color: rgba($color-secondary-dark, .4);
+  background-color: rgba($color-secondary-dark, .7);
   display: flex;
   justify-content: flex-end;
   align-items: center;

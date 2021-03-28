@@ -4,18 +4,19 @@
       <h4 class="heading" :dir="direction">{{text.codingHead}}</h4>
       <ul :dir="direction" class="skillList">
         <li :dir="direction">HTML & CSS</li>
-        <li :dir="direction">Javascript</li>
+        <li :dir="direction">Javascript, JQuery</li>
         <li :dir="direction">Typescript</li>
         <li :dir="direction">Bootstrap</li>
-        <li :dir="direction">JQuery</li>
         <li :dir="direction">SASS</li>
         <li :dir="direction">Git</li>
         <li :dir="direction">Reactjs, Nextjs, Redux</li>
         <li :dir="direction">Vuejs, Nuxtjs</li>
         <li :dir="direction">PWA</li>
+        <li :dir="direction">Electronjs</li>
         <li :dir="direction">Nodejs, Expressjs</li>
-        <li :dir="direction">MySQL</li>
+        <li :dir="direction">MySQL, MongoDB</li>
         <li :dir="direction">PHP, Laravel</li>
+        <li :dir="direction">Wordpress</li>
       </ul>
     </div>
     <div class="partition" :class="{softwareFa: language === 'persian'}">

@@ -151,7 +151,7 @@ export default Vue.extend({
   }
 
   &__langBtn {
-    background-color: rgba($color-secondary-dark, .5);
+    background-color: rgba($color-secondary-dark, .7);
     border-radius: 5px;
     padding: .5rem 1.5rem;
     margin: 0 auto;
@@ -179,7 +179,7 @@ export default Vue.extend({
   &__navBtn {
     display: block;
     width: 100%;
-    background-color: rgba($color-primary-dark, .5);
+    background-color: rgba($color-primary-dark, .7);
     font-size: 2rem;
     padding: 1rem 0;
 
@@ -188,7 +188,7 @@ export default Vue.extend({
     }
 
     &:hover {
-      background-color: rgba($color-secondary-dark, .5);
+      background-color: rgba($color-secondary-dark, .7);
     }
 
   }
@@ -234,6 +234,6 @@ export default Vue.extend({
 }
 
 .curSecStyle {
-  background-color: rgba($color-secondary-dark, .5);
+  background-color: rgba($color-secondary-dark, .7);
 }
 </style>

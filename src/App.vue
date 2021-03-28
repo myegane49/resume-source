@@ -1,8 +1,8 @@
 <template>
   <div class="app">
     <img class="app__background"
-      srcset="../assets/images/background-sm.jpg 800w, ../assets/images/background-md.jpg 1280w, ../assets/images/background-lg.jpg 1920w"
-      sizes="(max-width: 600px) 800px, (max-width: 1000px) 1280px, 1920px" src="../assets/images/background-lg.jpg">
+      srcset="./assets/images/background-sm.jpg 800w, ./assets/images/background-md.jpg 1280w, ./assets/images/background-lg.jpg 1920w"
+      sizes="(max-width: 600px) 800px, (max-width: 1000px) 1280px, 1920px" src="./assets/images/background-lg.jpg">
     <div class="app__section" ref="resumeSection">
       <transition name="fade" mode="out-in">
         <component class="app__component" :is="section" :language="lang"></component>
@@ -19,11 +19,11 @@
 <script lang="ts">
 import Vue from 'vue';
 
-import Menu from '../components/Menu.vue';
-import Details from '../components/Details.vue';
-import Education from '../components/Education.vue';
-import Portfolio from '../components/Portfolio.vue';
-import Skills from '../components/Skills.vue';
+import Menu from './components/Menu.vue';
+import Details from './components/Details.vue';
+import Education from './components/Education.vue';
+import Portfolio from './components/Portfolio.vue';
+import Skills from './components/Skills.vue';
 
 export default Vue.extend({
   name: 'App',

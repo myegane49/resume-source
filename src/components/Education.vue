@@ -159,6 +159,24 @@ export default Vue.extend({
           duration: 30
         },
         {
+          name: 'Wordpress',
+          title: 'Become a WordPress Developer: Unlocking Power With Code',
+          link: 'https://www.udemy.com/course/become-a-wordpress-developer-php-javascript/',
+          duration: 26
+        },
+        {
+          name: 'MongoDB',
+          title: "MongoDB - The Complete Developer's Guide 2021",
+          link: 'https://www.udemy.com/course/mongodb-the-complete-developers-guide/',
+          duration: 17
+        },
+        {
+          name: 'Electronjs',
+          title: "Master Electron: Desktop Apps with HTML, JavaScript & CSS",
+          link: 'https://www.udemy.com/course/master-electron/',
+          duration: 8
+        },
+        {
           name: 'photoshop',
           title: 'Lynda.com: Photoshop.CC.2018 One on One Fundamentals',
           link: 'https://www.lynda.com/Photoshop-tutorials/Photoshop-CC-2018-One-One-Fundamentals/633852-2.html',
