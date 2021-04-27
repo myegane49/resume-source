@@ -38,6 +38,12 @@ export default Vue.extend({
         portfoHead: 'Portfolio'
       },
       projects: {
+        traderjournal: {
+          link: 'https://www.traderjournal.ir',
+          imageSrc: '/images/traderjournal.png',
+          descriptionEn: 'An application built with Laravel and Vuejs to register trades of a financial markets trader',
+          descriptionFa: 'اپلیکیشنی برای ثبت ترید ها در بازارهای مالی ساخته شده با Laravel و Vuejs'
+        },
         imagebay: {
           link: 'https://yegane-imagebay.herokuapp.com',
           imageSrc: '/images/imagebay.png',
