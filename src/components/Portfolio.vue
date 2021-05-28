@@ -44,6 +44,12 @@ export default Vue.extend({
           descriptionEn: 'An application built with Laravel and Vuejs to register trades of a financial markets trader',
           descriptionFa: 'اپلیکیشنی برای ثبت ترید ها در بازارهای مالی ساخته شده با Laravel و Vuejs'
         },
+        adorian: {
+          link: 'https://www.adorian.ir',
+          imageSrc: '/images/adorian.png',
+          descriptionEn: 'The website for my own brand that I use to work as a freelance web developer built with Laravel',
+          descriptionFa: 'وبسایت برند خودم که برای کار به عنوان یک برنامه نویس وب فریلنس از آن استفاده می کنم. ساخته شده با Laravel'
+        },
         imagebay: {
           link: 'https://yegane-imagebay.herokuapp.com',
           imageSrc: '/images/imagebay.png',
